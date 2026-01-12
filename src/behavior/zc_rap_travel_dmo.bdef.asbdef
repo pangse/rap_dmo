@@ -1,0 +1,19 @@
+projection;
+strict ( 2 );
+
+define behavior for ZC_RAP_Travel_DMO alias Travel
+{
+  use create;
+  use update;
+  use delete;
+
+  use association _Booking { create; }
+}
+
+define behavior for ZC_RAP_Booking_DMO alias Booking
+{
+  use update;
+  use delete;
+
+  use association _Travel;
+}

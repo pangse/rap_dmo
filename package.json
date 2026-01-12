@@ -1,0 +1,23 @@
+{
+  "name": "@sap/rap-dmo-common",
+  "version": "1.0.0",
+  "description": "SAP RAP DMO Package Common - Demo package for RESTFUL ABAP Programming Model",
+  "keywords": [
+    "SAP",
+    "RAP",
+    "ABAP",
+    "DMO",
+    "RESTFUL",
+    "CDS"
+  ],
+  "author": "SAP",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pangse/rap_dmo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pangse/rap_dmo/issues"
+  },
+  "homepage": "https://github.com/pangse/rap_dmo#readme"
+}
