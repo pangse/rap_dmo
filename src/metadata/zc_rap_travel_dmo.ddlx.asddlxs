@@ -1,0 +1,81 @@
+@Metadata.layer: #CORE
+@UI: {
+  headerInfo: {
+    typeName: 'Travel',
+    typeNamePlural: 'Travels',
+    title: {
+      type: #STANDARD,
+      value: 'TravelID'
+    }
+  }
+}
+annotate view ZC_RAP_Travel_DMO with
+{
+  @UI.facet: [
+    {
+      id: 'Travel',
+      purpose: #STANDARD,
+      type: #IDENTIFICATION_REFERENCE,
+      label: 'Travel',
+      position: 10
+    },
+    {
+      id: 'Booking',
+      purpose: #STANDARD,
+      type: #LINEITEM_REFERENCE,
+      label: 'Bookings',
+      position: 20,
+      targetElement: '_Booking'
+    }
+  ]
+
+  @UI: {
+    lineItem: [ { position: 10, importance: #HIGH } ],
+    identification: [ { position: 10 } ]
+  }
+  TravelID;
+
+  @UI: {
+    lineItem: [ { position: 20, importance: #HIGH } ],
+    identification: [ { position: 20 } ],
+    selectionField: [ { position: 10 } ]
+  }
+  AgencyID;
+
+  @UI: {
+    lineItem: [ { position: 30, importance: #HIGH } ],
+    identification: [ { position: 30 } ],
+    selectionField: [ { position: 20 } ]
+  }
+  CustomerID;
+
+  @UI: {
+    lineItem: [ { position: 40, importance: #MEDIUM } ],
+    identification: [ { position: 40 } ]
+  }
+  BeginDate;
+
+  @UI: {
+    lineItem: [ { position: 50, importance: #MEDIUM } ],
+    identification: [ { position: 50 } ]
+  }
+  EndDate;
+
+  @UI: {
+    lineItem: [ { position: 60, importance: #MEDIUM } ],
+    identification: [ { position: 60 } ]
+  }
+  TotalPrice;
+
+  @UI: {
+    identification: [ { position: 70 } ]
+  }
+  Description;
+
+  @UI: {
+    lineItem: [ { position: 70, importance: #HIGH } ],
+    identification: [ { position: 80 } ],
+    selectionField: [ { position: 30 } ]
+  }
+  Status;
+}
